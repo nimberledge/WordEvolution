@@ -160,14 +160,14 @@ class Population(object):
 
     def evaluate(self, min_fitness=0.99):
         # Check if all members of population are sufficiently close to target
-        for individual in self.individuals:
-            if individual.fitness < min_fitness:
-                return False
-        return True
+        # for individual in self.individuals:
+        #     if individual.fitness < min_fitness:
+        #         return False
+        # return True
         # Use below code to stop at the first good match
-        # if self.max_fitness >= min_fitness:
-        #     return True
-        # return False
+        if self.max_fitness >= min_fitness:
+            return True
+        return False
 
     def __str__(self):
         if self.cached_repr:
@@ -194,4 +194,4 @@ def reach_target(target, size=5):
 
 
 if __name__ == '__main__':
-    reach_target("logos", size=10)
+    reach_target("logos", size=15)
