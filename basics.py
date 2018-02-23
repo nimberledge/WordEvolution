@@ -195,3 +195,4 @@ def reach_target(target, size=5):
 
 if __name__ == '__main__':
     reach_target("logos", size=15)
+    print ("HELLO")
